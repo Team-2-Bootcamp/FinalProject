@@ -13,68 +13,39 @@ import { useGlobalState } from "~~/services/store/store";
  * Site footer
  */
 export const Footer = () => {
-  const nativeCurrencyPrice = useGlobalState(state => state.nativeCurrencyPrice);
-  const { targetNetwork } = useTargetNetwork();
-  const isLocalNetwork = targetNetwork.id === hardhat.id;
-
   return (
-    <div className="min-h-0 py-5 px-1 mb-11 lg:mb-0">
-      <div>
-        <div className="fixed flex justify-between items-center w-full z-10 p-4 bottom-0 left-0 pointer-events-none">
-          <div className="flex flex-col md:flex-row gap-2 pointer-events-auto">
-            {nativeCurrencyPrice > 0 && (
-              <div>
-                <div className="btn btn-primary btn-sm font-normal normal-case gap-1 cursor-auto">
-                  <CurrencyDollarIcon className="h-4 w-4" />
-                  <span>{nativeCurrencyPrice}</span>
-                </div>
-              </div>
-            )}
-            {isLocalNetwork && (
-              <>
-                <Faucet />
-                <Link href="/blockexplorer" passHref className="btn btn-primary btn-sm font-normal normal-case gap-1">
-                  <MagnifyingGlassIcon className="h-4 w-4" />
-                  <span>Block Explorer</span>
-                </Link>
-              </>
-            )}
+    <footer className="footer p-10 bg-amber-500 rounded-tr-xl rounded-tl-xl mt-16 text-base-content">
+      <nav>
+        <header className="footer-title text-cyan-700 text-xl">Services</header>
+        <a className="link link-hover">Token Sale</a>
+        <a className="link link-hover">Auction</a>
+        <a className="link link-hover">Marketing</a>
+        <a className="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <header className="footer-title text-cyan-700 text-xl">Company</header>
+        <a className="link link-hover">About us</a>
+        <a className="link link-hover">Contact</a>
+        <a className="link link-hover">Jobs</a>
+      </nav>
+      <nav>
+        <header className="footer-title text-cyan-700 text-xl">Legal</header>
+        <a className="link link-hover">Terms of use</a>
+        <a className="link link-hover">Privacy policy</a>
+        <a className="link link-hover">Cookie policy</a>
+      </nav>
+      <form>
+        <header className="footer-title text-cyan-700 text-xl">Newsletter</header>
+        <fieldset className="form-control w-80">
+          <label className="label">
+            <span className="label-text">Enter your email address</span>
+          </label>
+          <div className="join">
+            <input type="text" placeholder="username@site.com" className="input input-bordered join-item" />
+            <button className="btn btn-primary join-item">Subscribe</button>
           </div>
-          <SwitchTheme className={`pointer-events-auto ${isLocalNetwork ? "self-end md:self-auto" : ""}`} />
-        </div>
-      </div>
-      <div className="w-full">
-        <ul className="menu menu-horizontal w-full">
-          <div className="flex justify-center items-center gap-2 text-sm w-full">
-            <div className="text-center">
-              <a href="https://github.com/scaffold-eth/se-2" target="_blank" rel="noreferrer" className="link">
-                Fork me
-              </a>
-            </div>
-            <span>·</span>
-            <div className="flex justify-center items-center gap-2">
-              <p className="m-0 text-center">
-                Built with <HeartIcon className="inline-block h-4 w-4" /> at
-              </p>
-              <a
-                className="flex justify-center items-center gap-1"
-                href="https://buidlguidl.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <BuidlGuidlLogo className="w-3 h-5 pb-1" />
-                <span className="link">BuidlGuidl</span>
-              </a>
-            </div>
-            <span>·</span>
-            <div className="text-center">
-              <a href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" target="_blank" rel="noreferrer" className="link">
-                Support
-              </a>
-            </div>
-          </div>
-        </ul>
-      </div>
-    </div>
+        </fieldset>
+      </form>
+    </footer>
   );
 };

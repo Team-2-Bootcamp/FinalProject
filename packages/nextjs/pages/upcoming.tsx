@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 const Upcoming: NextPage = () => {
   return (
     <>
-      <p className="text-4xl text-black text-center mt-16">Upcoming Auctions Page</p>
+      <p className="text-4xl text-black text-center mt-32">Upcoming Auctions Page</p>
       <p className="text-center mt-10 font-bold text-amber-400 text-2xl">Upcoming Auctions</p>
       <div className="carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
         <div className="carousel-item bg-white rounded-md">

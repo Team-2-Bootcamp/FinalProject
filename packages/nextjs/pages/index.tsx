@@ -1,11 +1,12 @@
 import { useState } from "react";
+import Link from "next/link";
 import type { NextPage } from "next";
 import { useAccount, useBalance, useContractRead, useNetwork, useSignMessage } from "wagmi";
 
 const Home: NextPage = () => {
   return (
     <>
-      <div className="flex items-center flex-col flex-grow pt-10">
+      <div className="flex items-center flex-col flex-grow pt-10 mt-32">
         <div className="px-5">
           <h1 className="text-center mb-8">
             <span className="block text-4xl mb-2 font-bold">
@@ -38,7 +39,13 @@ const Home: NextPage = () => {
                 <p className="w-full font-bold">
                   Bid Amount: <span className="text-amber-400 font-semibold">127 AuA</span>
                 </p>
-                <button className="btn mt-4 w-32 bg-amber-500">Place Bid</button>
+                <Link
+                  href="/biddingpage"
+                  passHref
+                  className={`bg-amber-500 hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
+                >
+                  <span>Place Bid(please click me)</span>
+                </Link>{" "}
               </div>
             </div>
             <div className="carousel-item bg-white rounded-md">
@@ -59,7 +66,13 @@ const Home: NextPage = () => {
                 <p className="w-full font-bold">
                   Bid Amount: <span className="text-amber-400 font-semibold">127 AuA</span>
                 </p>
-                <button className="btn mt-4 w-32 bg-amber-500">Place Bid</button>
+                <Link
+                  href="/biddingpage"
+                  passHref
+                  className={`bg-amber-500 hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
+                >
+                  <span>Place Bid(please click me)</span>
+                </Link>
               </div>
             </div>
             <div className="carousel-item bg-white rounded-md">
