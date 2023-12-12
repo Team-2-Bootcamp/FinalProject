@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { NextPage } from "next";
 
 const Upcoming: NextPage = () => {
