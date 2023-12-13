@@ -6,17 +6,9 @@ const NFTListingPage: NextPage = () => {
   const [listedNFT, setListedNFT] = useState<string | null>(null);
 
   // Callback function to handle NFT listing
-  const onListNFT = async (
-    nftContract: string,
-    tokenId: number,
-    startingPrice: number,
-    startTime: number,
-    duration: number,
-  ) => {
+  const onListNFT = async (startingPrice: number, startTime: number, duration: number) => {
     try {
       // Replace the following with your logic to interact with the Ethereum smart contract
-      console.log("NFT Contract:", nftContract);
-      console.log("Token ID:", tokenId);
       console.log("Starting Price:", startingPrice);
       console.log("Start Time:", startTime);
       console.log("Duration:", duration);

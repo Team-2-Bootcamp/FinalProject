@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { NextPage } from "next";
-import { useAccount, useBalance, useContractRead, useNetwork, useSignMessage } from "wagmi";
+import { useAccount, useBalance, useContractRead, useContractWrite, useNetwork, useSignMessage } from "wagmi";
 
 const Home: NextPage = () => {
   return (
