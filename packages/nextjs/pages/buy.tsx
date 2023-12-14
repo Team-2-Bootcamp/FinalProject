@@ -117,9 +117,9 @@ const Exchange: NextPage = () => {
       <dialog id="my_modal_2" className="modal">
         <EthToAuASwap></EthToAuASwap>
       </dialog>
-      <div className="flex flex-col items-center justify-center bg-slate-600 mt-20 min-h-full">
+      <div className="flex flex-col items-center justify-center bg-slate-600 mt-20 min-h-1/2">
         <h2 className="text-center text-2xl font-semibold text-black mt-10">Exchange between AuA and ETH seamlessly</h2>
-        <div className="bg-amber-500 rounded-lg p-10 shadow-2xl shadow-black mt-10 w-1/2 h-4/5 mb-20">
+        <div className="bg-amber-500 rounded-lg p-10 shadow-2xl shadow-black mt-10 w-1/2 h-3/5 mb-20">
           <p className="text-left justify-left items-left font-bold bg-white rounded-lg p-2 w-14">Swap</p>
           <div className="w-full bg-amber-700 rounded-md p-4 font-semibold">
             <div className="flex justify-evenly">
